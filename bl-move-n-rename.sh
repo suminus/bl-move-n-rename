@@ -78,9 +78,14 @@ MOVE () {
         }
 
 RENAME () {
+
+#### search for vtr-dpx-seq
+
         fl-ls -R $SRC | grep dpx > $HOME/tmp_seq.rn
         cat $HOME/tmp_seq.rn | grep dpx | rev | cut -d / -f 2 | rev > $HOME/tmp_fld.rn
 
+#### gen list of seq to rename
+		
         cp $HOME/tmp_seq.rn $HOME/tmp_seq.rn.mklist
         cp $HOME/tmp_fld.rn $HOME/tmp_fld.rn.mklist
         touch > $HOME/tmp_seq.rn.list
@@ -102,6 +107,8 @@ RENAME () {
 
         rm $HOME/tmp_seq.rn.mklist
         rm $HOME/tmp_fld.rn.mklist
+
+#### move all found seq into appropriate folder
 
         clear
         echo -e " this will \e[7m rename \e[27m:"
