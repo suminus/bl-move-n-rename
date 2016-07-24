@@ -1,7 +1,7 @@
 #!/bin/bash
 # move and rename clipster vtr seq to reels
 # by foldernames utilising filmlight's fl-ls fl-mv
-# (c) mario hartz @ postfactory.de
+# (c) mario@postfactory.de
 # v.150630
 
 HOME=/usr/fl/scripts
